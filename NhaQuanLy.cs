@@ -9,7 +9,7 @@ namespace QLVienKhoaHoc
     /*
      * họ tên, năm sinh, bằng cấp, chức vụ, số ngày công trong tháng, bậc lương 
      */
-    public class NhaQuanLy:NhanVien
+    public class NhaQuanLy : NhanVien, ITinhLuong
     {
         public string ChucVu { get; set; }
         public int SoNgayCong { get; set; }
@@ -22,9 +22,10 @@ namespace QLVienKhoaHoc
             SoNgayCong = soNgayCong;
             BacLuong = bacLuong;
         }
+
         public double LuongHangThang()
         {
-            return SoNgayCong * (double)BacLuong;
+            return (double)(SoNgayCong * BacLuong);
         }
     }
 }

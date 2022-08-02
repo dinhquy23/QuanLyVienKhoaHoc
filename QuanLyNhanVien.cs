@@ -85,7 +85,7 @@ namespace QLVienKhoaHoc
                 if (item is NhanVienPhongThiNghiem)
                 {
                     NhanVienPhongThiNghiem a = (NhanVienPhongThiNghiem)item;
-                    Tong1 += a.LuongTrongThang;
+                    Tong1 += a.LuongHangThang();
                 }
                 else if (item is NhaKhoaHoc)
                 {
@@ -98,9 +98,9 @@ namespace QLVienKhoaHoc
                     Tong3 += c.LuongHangThang();
                 }
             }
-            Console.Write($"\nLuong cua nhan vien phong thi nghiem trong thang la: {string.Format("{0:#,##0.00}", Tong1)}");
-            Console.Write($"\nLuong cua nha khoa hoc trong thang la: {string.Format("{0:#,##0.00}", Tong2 * 1000000)}");
-            Console.Write($"\nLuong cua nha quan ly trong thang la: {string.Format("{0:#,##0.00}", Tong3 * 1000000)}\n");
+            Console.Write($"\nLuong cua nhan vien phong thi nghiem trong thang la: {string.Format("{0:#,##0}", Tong1)}");
+            Console.Write($"\nLuong cua nha khoa hoc trong thang la: {string.Format("{0:#,##0}", Tong2 * 1000000)}");
+            Console.Write($"\nLuong cua nha quan ly trong thang la: {string.Format("{0:#,##0}", Tong3 * 1000000)}\n");
         }
         public void HienThiNhanVien()
         {

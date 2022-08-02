@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLVienKhoaHoc
 {
-    public class NhaKhoaHoc:NhanVien
+    public class NhaKhoaHoc:NhanVien,ITinhLuong
     {
         public string ChucVu { get; set; }
         public int SoBaiBao { get; set; }
@@ -20,10 +20,10 @@ namespace QLVienKhoaHoc
             SoNgayCong = soNgayCong;
             BacLuong = bacLuong;
         }
+
         public double LuongHangThang()
         {
-            return SoNgayCong * (double)BacLuong;
+            return (double)(SoNgayCong * BacLuong);
         }
-
     }
 }
