@@ -18,7 +18,9 @@ namespace QLVienKhoaHoc
                 Console.Write($"\n5. Hien thi luong cua nhan vien");
                 Console.Write($"\n0. Thoat");
                 Console.Write($"\nLua chon cua ban: ");
-                luaChon=Console.ReadLine();
+                luaChon = Console.ReadLine();
+                Console.Write($"\n\n--------------------------------");
+
                 switch(luaChon)
                 {
                     case "1":

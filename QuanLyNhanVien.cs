@@ -26,7 +26,7 @@ namespace QLVienKhoaHoc
         /// </summary>
         public void AddNhaKhoaHoc()
         {
-            Console.Write($"Nhap ten: ");
+            Console.Write($"\nNhap ten: ");
             string ten = Console.ReadLine();
             Console.Write($"Nhap nam sinh: ");
             int tuoi = int.Parse(Console.ReadLine());
@@ -49,7 +49,7 @@ namespace QLVienKhoaHoc
         /// </summary>
         public void AddNhaQuanLy()
         {
-            Console.Write($"Nhap ten: ");
+            Console.Write($"\nNhap ten: ");
             string ten = Console.ReadLine();
             Console.Write($"Nhap nam sinh: ");
             int tuoi = int.Parse(Console.ReadLine());
@@ -70,7 +70,7 @@ namespace QLVienKhoaHoc
         /// </summary>
         public void AddNhanVienPhongThiNghiem()
         {
-            Console.Write($"Nhap ten: ");
+            Console.Write($"\nNhap ten: ");
             string ten = Console.ReadLine();
             Console.Write($"Nhap nam sinh: ");
             int tuoi = int.Parse(Console.ReadLine());
@@ -116,14 +116,14 @@ namespace QLVienKhoaHoc
         /// </summary>
         public void HienThiNhanVien()
         {
-            Console.WriteLine("Danh sach tung loai nhan vien");
+            Console.WriteLine("\nDanh sach tung loai nhan vien");
             Console.WriteLine("\n======== Nha khoa hoc ========");
             foreach (var item in _dsNhanVien)
             {
                 if (item is NhaKhoaHoc)
                 {
                     NhaKhoaHoc a = (NhaKhoaHoc)item;
-                    Console.WriteLine($"{a.HoTen}   {a.NamSinh}    {a.BangCap}  {a.ChucVu}  {a.SoBaiBao}    {a.SoNgayCong}  {a.BacLuong}");
+                    Console.WriteLine($"{a.HoTen,10}   {a.NamSinh,5}    {a.BangCap,8}  {a.ChucVu,8}  {a.SoBaiBao,5}    {a.SoNgayCong,5}  {a.BacLuong,8}");
                 }
             }
             Console.WriteLine("\n======== Nha quan ly ========");
@@ -132,7 +132,7 @@ namespace QLVienKhoaHoc
                 if (item is NhaQuanLy)
                 {
                     NhaQuanLy a = (NhaQuanLy)item;
-                    Console.WriteLine($"{a.HoTen}   {a.NamSinh}    {a.BangCap}  {a.ChucVu}    {a.SoNgayCong}  {a.BacLuong}");
+                    Console.WriteLine($"{a.HoTen,10}   {a.NamSinh,5}    {a.BangCap,8}  {a.ChucVu,8}    {a.SoNgayCong,5}  {a.BacLuong,8}");
                 }
             }
             Console.WriteLine("\n======== Nhan vien phong thi nghiem ========");
@@ -141,7 +141,7 @@ namespace QLVienKhoaHoc
                 if (item is NhanVienPhongThiNghiem)
                 {
                     NhanVienPhongThiNghiem a = (NhanVienPhongThiNghiem)item;
-                    Console.WriteLine($"{a.HoTen}   {a.NamSinh}    {a.BangCap}  {a.LuongTrongThang}");
+                    Console.WriteLine($"{a.HoTen,10}   {a.NamSinh,5}    {a.BangCap,8}  {a.LuongTrongThang,8}");
                 }
             }
         }
