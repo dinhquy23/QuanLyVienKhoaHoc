@@ -21,5 +21,11 @@ namespace QLVienKhoaHoc
             NamSinh = namSinh;
             BangCap = bangCap;
         }
+
+        // method
+        public override string ToString()
+        {
+            return $"{HoTen,10}   {NamSinh,5}   {BangCap,8}";
+        }
     }
 }
