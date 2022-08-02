@@ -11,6 +11,7 @@ namespace QLVienKhoaHoc
             QuanLyNhanVien manager = new QuanLyNhanVien();
             do
             {
+                Console.Write($"=========MENU=========");
                 Console.Write($"\n1. Them nha khoa hoc");
                 Console.Write($"\n2. Them nha quan ly");
                 Console.Write($"\n3. Them nhan vien phong thi nghiem");
@@ -44,7 +45,7 @@ namespace QLVienKhoaHoc
                         Console.Write($"Lua chon sai, hay nhap lai!");
                         break;
                 }
-                Console.WriteLine("-------------------------------");
+                Console.WriteLine("\n--------------------------------");
             }
             while (luaChon != "0");
         }

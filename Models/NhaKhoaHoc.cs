@@ -1,12 +1,13 @@
-﻿using System;
+﻿using QLVienKhoaHoc.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLVienKhoaHoc
+namespace QLVienKhoaHoc.Models
 {
-    public class NhaKhoaHoc:NhanVien,ITinhLuong
+    public class NhaKhoaHoc : NhanVien, ITinhLuong
     {
         //  Properties
         public string ChucVu { get; set; }
@@ -18,14 +19,14 @@ namespace QLVienKhoaHoc
         public NhaKhoaHoc() { }
         public NhaKhoaHoc
         (
-        string hoTen, 
-        int namSinh, 
-        string bangCap, 
-        string chucVu, 
-        int soBaiBao, 
-        int soNgayCong, 
+        string hoTen,
+        int namSinh,
+        string bangCap,
+        string chucVu,
+        int soBaiBao,
+        int soNgayCong,
         decimal bacLuong
-        ):base(hoTen,namSinh,bangCap)
+        ) : base(hoTen, namSinh, bangCap)
         {
             ChucVu = chucVu;
             SoBaiBao = soBaiBao;
@@ -40,7 +41,7 @@ namespace QLVienKhoaHoc
         }
         public override string ToString()
         {
-            return base.ToString()+ $"    {ChucVu,8}    {SoBaiBao,5}   {SoNgayCong,5}   {BacLuong,8}";
+            return base.ToString() + $"    {ChucVu,8}    {SoBaiBao,5}   {SoNgayCong,5}   {BacLuong,8}";
         }
     }
 }

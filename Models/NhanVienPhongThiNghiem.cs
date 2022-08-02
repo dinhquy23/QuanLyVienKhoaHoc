@@ -1,10 +1,11 @@
-﻿using System;
+﻿using QLVienKhoaHoc.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLVienKhoaHoc
+namespace QLVienKhoaHoc.Models
 {
     public class NhanVienPhongThiNghiem : NhanVien, ITinhLuong
     {
@@ -26,7 +27,7 @@ namespace QLVienKhoaHoc
         }
         public override string ToString()
         {
-            return base.ToString() + $"    {(string.Format("{0:#,##0}",LuongTrongThang)), 8}";
+            return base.ToString() + $"    {string.Format("{0:#,##0}", LuongTrongThang),8}";
         }
     }
 }
