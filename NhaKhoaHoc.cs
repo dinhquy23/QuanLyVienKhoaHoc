@@ -38,5 +38,9 @@ namespace QLVienKhoaHoc
         {
             return (double)(SoNgayCong * BacLuong);
         }
+        public override string ToString()
+        {
+            return $"{HoTen,10}   {NamSinh,5}   {BangCap,8}    {ChucVu,8}    {SoBaiBao,5}   {SoNgayCong,5}   {BacLuong,8}";
+        }
     }
 }

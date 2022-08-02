@@ -24,5 +24,9 @@ namespace QLVienKhoaHoc
         {
             return LuongTrongThang;
         }
+        public override string ToString()
+        {
+            return $"{HoTen,10}   {NamSinh,5}    {BangCap,8}    {(string.Format("{0:#,##0}",LuongTrongThang)), 8}";
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace QLVienKhoaHoc
         }
 
         /// <summary>
-        /// Phương thức thêm mới một nhà khoa học vào CSDL mẫu
+        /// Phương thức thêm mới một nhà khoa học vào CSDL ảo
         /// </summary>
         public void AddNhaKhoaHoc()
         {
@@ -45,7 +45,7 @@ namespace QLVienKhoaHoc
         }
 
         /// <summary>
-        /// Phương thức thêm mới một nhà quản lý vào CSDL mẫu
+        /// Phương thức thêm mới một nhà quản lý vào CSDL ảo
         /// </summary>
         public void AddNhaQuanLy()
         {
@@ -83,7 +83,7 @@ namespace QLVienKhoaHoc
         }
 
         /// <summary>
-        /// Phương thức tính tổng lương từng tháng của từng loại đới tượng khác nhau
+        /// Phương thức tính tổng lương từng tháng của từng loại đối tượng khác nhau
         /// </summary>
         public void TongLuongTungDoiTuong()
         {
@@ -112,7 +112,7 @@ namespace QLVienKhoaHoc
         }
 
         /// <summary>
-        /// Phuông thức hiển thị danh sách nhân viên theo tưng loại
+        /// Phương thức hiển thị danh sách nhân viên theo tưng loại
         /// </summary>
         public void HienThiNhanVien()
         {
@@ -123,7 +123,7 @@ namespace QLVienKhoaHoc
                 if (item is NhaKhoaHoc)
                 {
                     NhaKhoaHoc a = (NhaKhoaHoc)item;
-                    Console.WriteLine($"{a.HoTen,10}   {a.NamSinh,5}    {a.BangCap,8}  {a.ChucVu,8}  {a.SoBaiBao,5}    {a.SoNgayCong,5}  {a.BacLuong,8}");
+                    Console.WriteLine(a.ToString());
                 }
             }
             Console.WriteLine("\n======== Nha quan ly ========");
@@ -132,7 +132,7 @@ namespace QLVienKhoaHoc
                 if (item is NhaQuanLy)
                 {
                     NhaQuanLy a = (NhaQuanLy)item;
-                    Console.WriteLine($"{a.HoTen,10}   {a.NamSinh,5}    {a.BangCap,8}  {a.ChucVu,8}    {a.SoNgayCong,5}  {a.BacLuong,8}");
+                    Console.WriteLine(a.ToString());
                 }
             }
             Console.WriteLine("\n======== Nhan vien phong thi nghiem ========");
@@ -141,7 +141,7 @@ namespace QLVienKhoaHoc
                 if (item is NhanVienPhongThiNghiem)
                 {
                     NhanVienPhongThiNghiem a = (NhanVienPhongThiNghiem)item;
-                    Console.WriteLine($"{a.HoTen,10}   {a.NamSinh,5}    {a.BangCap,8}  {a.LuongTrongThang,8}");
+                    Console.WriteLine(a.ToString());
                 }
             }
         }
