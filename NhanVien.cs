@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLVienKhoaHoc
 {
-    public class NhanVien
+    public abstract class NhanVien
     {
         //  Properties
         public string HoTen { get; set; }
