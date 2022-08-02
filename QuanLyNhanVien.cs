@@ -8,6 +8,7 @@ namespace QLVienKhoaHoc
 {
     public class QuanLyNhanVien
     {
+        //  Tạo một cơ sở dữ liệu ảo và thêm mới một vài bản ghi
         private static List<NhanVien> _dsNhanVien;
         static QuanLyNhanVien()
         {
@@ -19,14 +20,10 @@ namespace QLVienKhoaHoc
                 new NhaQuanLy("Tien Dung", 1998, "Cao Dang", "Abc", 21, 0.9m)
             };
         }
-        //List<NhanVien> dsNhanVien = new List<NhanVien>()
-        //{
-        //    new NhaKhoaHoc("Dinh Quy", 1999, "Ky su", "Fresher", 2, 22, 0.7m),
-        //    new NhaKhoaHoc("Pham Tuan", 1999, "Ky su", "Intern", 3, 21, 0.7m),
-        //    new NhanVienPhongThiNghiem("Huy Hoang", 2000, "Cao Dang", 7000000),
-        //    new NhaQuanLy("Tien Dung", 1998, "Cao Dang", "Abc", 21, 0.9m)
-        //};
 
+        /// <summary>
+        /// Phương thức thêm mới một nhà khoa học vào CSDL mẫu
+        /// </summary>
         public void AddNhaKhoaHoc()
         {
             Console.Write($"Nhap ten: ");
@@ -46,6 +43,10 @@ namespace QLVienKhoaHoc
             NhaKhoaHoc nhaKhoaHoc = new NhaKhoaHoc(ten, tuoi, bangCap, chucVu, soBaiBao, ngayCong, bacLuong);
             _dsNhanVien.Add(nhaKhoaHoc);
         }
+
+        /// <summary>
+        /// Phương thức thêm mới một nhà quản lý vào CSDL mẫu
+        /// </summary>
         public void AddNhaQuanLy()
         {
             Console.Write($"Nhap ten: ");
@@ -63,6 +64,10 @@ namespace QLVienKhoaHoc
             NhaQuanLy nhaQuanLy = new NhaQuanLy(ten, tuoi, bangCap, chucVu, ngayCong, bacLuong);
             _dsNhanVien.Add(nhaQuanLy);
         }
+
+        /// <summary>
+        /// Phương thức thêm mới một nhân viên phòng thí nghiệm vào CSDL mẫu
+        /// </summary>
         public void AddNhanVienPhongThiNghiem()
         {
             Console.Write($"Nhap ten: ");
@@ -77,6 +82,9 @@ namespace QLVienKhoaHoc
             _dsNhanVien.Add(nhanVienPhongThiNghiem);
         }
 
+        /// <summary>
+        /// Phương thức tính tổng lương từng tháng của từng loại đới tượng khác nhau
+        /// </summary>
         public void TongLuongTungDoiTuong()
         {
             double Tong1 = 0, Tong2 = 0, Tong3 = 0;
@@ -102,6 +110,10 @@ namespace QLVienKhoaHoc
             Console.Write($"\nLuong cua nha khoa hoc trong thang la: {string.Format("{0:#,##0}", Tong2 * 1000000)}");
             Console.Write($"\nLuong cua nha quan ly trong thang la: {string.Format("{0:#,##0}", Tong3 * 1000000)}\n");
         }
+
+        /// <summary>
+        /// Phuông thức hiển thị danh sách nhân viên theo tưng loại
+        /// </summary>
         public void HienThiNhanVien()
         {
             Console.WriteLine("Danh sach tung loai nhan vien");

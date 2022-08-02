@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace QLVienKhoaHoc
 {
+    /// <summary>
+    /// Interface có chức năng tính tiền lươg của từng loại đối tượng theo từng tháng
+    /// </summary>
     internal interface ITinhLuong
     {
         double LuongHangThang();

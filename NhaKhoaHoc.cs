@@ -8,12 +8,24 @@ namespace QLVienKhoaHoc
 {
     public class NhaKhoaHoc:NhanVien,ITinhLuong
     {
+        //  Properties
         public string ChucVu { get; set; }
         public int SoBaiBao { get; set; }
         public int SoNgayCong { get; set; }
         public decimal BacLuong { get; set; }
+
+        //  Contructor
         public NhaKhoaHoc() { }
-        public NhaKhoaHoc(string hoTen, int namSinh, string bangCap, string chucVu, int soBaiBao, int soNgayCong, decimal bacLuong):base(hoTen,namSinh,bangCap)
+        public NhaKhoaHoc
+        (
+        string hoTen, 
+        int namSinh, 
+        string bangCap, 
+        string chucVu, 
+        int soBaiBao, 
+        int soNgayCong, 
+        decimal bacLuong
+        ):base(hoTen,namSinh,bangCap)
         {
             ChucVu = chucVu;
             SoBaiBao = soBaiBao;
@@ -21,6 +33,7 @@ namespace QLVienKhoaHoc
             BacLuong = bacLuong;
         }
 
+        // Method
         public double LuongHangThang()
         {
             return (double)(SoNgayCong * BacLuong);
