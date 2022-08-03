@@ -10,7 +10,7 @@ namespace QLVienKhoaHoc
     public class QuanLyNhanVien
     {
         //  Tạo một cơ sở dữ liệu ảo và thêm mới một vài bản ghi
-        private static List<NhanVien> _dsNhanVien;
+        private readonly static List<NhanVien> _dsNhanVien;
         static QuanLyNhanVien()
         {
             _dsNhanVien = new List<NhanVien>()
@@ -67,7 +67,7 @@ namespace QLVienKhoaHoc
         }
 
         /// <summary>
-        /// Phương thức thêm mới một nhân viên phòng thí nghiệm vào CSDL mẫu
+        /// Phương thức thêm mới một nhân viên phòng thí nghiệm vào CSDL ảo
         /// </summary>
         public void AddNhanVienPhongThiNghiem()
         {
